@@ -41,7 +41,7 @@ int countPairs2(int *arr, int len, int value) {
 int countPairs3(int *arr, int len, int value) {
   int count3 = 0;
   for (int i = 0; i < len; i++) {
-      count3 += binar(arr[i + 1], 0, len - i, value - arr[i]);
+      count3 += binar(*arr, 0, len - i, value - arr[i]);
   }
   return count3;
 }
