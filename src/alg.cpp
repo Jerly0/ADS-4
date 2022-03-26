@@ -16,14 +16,14 @@ int binar(int *arr, int l, int r, int a) {
 
 int countPairs1(int *arr, int len, int value) {
   int count1 = 0;
-  for (int i = 0; i < len - 1; i++) {
-    for (int k = i + 1; k < len; k++) {
-      if (arr[i] + arr[k] == value) {
+  for (int i = 0; i < len; i++) {
+    for (int k = 0; k < len; k++) {
+      if ((i != k) && (arr[i] + arr[k] == value)) {
         count1 += 1;
       }
     }
   }
-  return count1;
+  return count1 / 2;
 }
 
 int countPairs2(int *arr, int len, int value) {
